@@ -13,6 +13,7 @@ for i in range(num_tasks):
     difficulty = int(input("Difficulty (1–5): "))
     hours = int(input("Total hours needed: "))
     tasks.append(Task(subject, name, deadline, difficulty, hours))
+
 daily_limit = int(input("\nHow many hours can you study now? "))
 print("\n Study Session Plan\n")
 tasks.sort(key=calculate_priority, reverse=True)
