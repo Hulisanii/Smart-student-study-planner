@@ -9,6 +9,7 @@ def calculate_priority(task):
     else:
         urgency = 1
     return (task.difficulty * 2) + urgency
+
 def allocate_study_time(tasks, daily_limit):
     active_tasks = [t for t in tasks if t.remaining_hours > 0]
     total_priority = sum(calculate_priority(t) for t in active_tasks)
